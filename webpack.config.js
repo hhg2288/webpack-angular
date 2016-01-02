@@ -1,18 +1,15 @@
 var webpack = require('webpack');
 
 var config = {
-  context: __dirname + '/app',
   entry: './index.js',
   output: {
-    path: __dirname + '/app',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: prod ? './dist' : './client'
   },
 
-  plugins: [
-    new webpack.DefinePlugin({
-      ON_TEST: process.env.NODE_ENV === 'test'
-    })
-  ],
+  context: here('client'),
+
+  devtool: prod ? 'source-map' : 'eval',
 
   module: {
     loaders: [

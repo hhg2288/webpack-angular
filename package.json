@@ -5,9 +5,9 @@
   "main": "app/index.js",
   "repository": "https://github.com/kentcdodds/webpack-angular.git",
   "scripts": {
-    "test": "NODE_ENV=test karma start",
-    "start": "node node_modules/.bin/webpack-dev-server --content-base app",
-    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base client",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp client/index.html dist/index.html"
   },
   "keywords": [
     "webpack",
